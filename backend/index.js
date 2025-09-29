@@ -6,7 +6,7 @@ const connectDB = require('./db.js');
 const Item = require('./models/items.js');
 
 const app = express();
-connectDB(); //  Connect to MongoDB
+connectDB(); //  Connect to database 
 
 const PORT = 5000;
 
@@ -34,7 +34,7 @@ app.get("/api/items", async (req, res) => {
 //  Add a new item (name, email)
 app.post("/api/items", async (req, res) => {
   try {
-    const newItem = new Item(req.body); // create new document
+    const newItem = new Item(req.body); 
     const savedItem = await newItem.save(); // save to MongoDB
     res.json(savedItem);
   } catch (err) {
