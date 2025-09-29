@@ -1,0 +1,126 @@
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #f4f7fb;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  font-family: Arial, sans-serif;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+form {
+  margin-bottom: 1.5rem;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button[type="submit"] {
+  background: #007bff;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+button.cancel {
+  background: #6c757d;
+  color: white;
+}
+
+button.cancel:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.user-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.user-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+}
+
+.user-info {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.user-info strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.user-actions button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+}
+
+.user-actions button:first-child {
+  background: #ffc107;
+  color: black;
+}
+
+.user-actions button:first-child:hover {
+  background: #e0a800;
+}
+
+.user-actions button:last-child {
+  background: #dc3545;
+  color: white;
+}
+
+.user-actions button:last-child:hover {
+  background: #b52a37;
+}

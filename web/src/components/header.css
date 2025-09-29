@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  background-color: rgb(0, 0, 0);
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #f3f5f7; 
+}
+.nav {
+  display: flex;               
+  align-items: center;
+  gap: 2rem;                   
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f9fafc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fc230b;
+}
+
+
+.nav-link.active {
+  color: #ed4040;
+  border-bottom: 2px solid #f33939;
+  padding-bottom: 2px;
+}
+
+.hamburger {
+  display: block;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #4b5563;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
+  .hamburger {
+    display: none;
+  }
+}
