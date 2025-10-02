@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { UsersAPI } from "./api.js";
+import "./usercrud.css";
 
 export default function UsersCrud() {
   const [users, setUsers] = useState([]); // list of users

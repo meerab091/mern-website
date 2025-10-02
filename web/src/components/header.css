@@ -2,56 +2,118 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem 2.5rem;
+  padding: 1.2rem 2.5rem;
+  background-color: #ffffff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
-  background-color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
 }
 
+/* 🌟 Logo */
 .logo {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #f3f5f7; 
+  color: #0a0a0a;
+  letter-spacing: 0.5px;
 }
+
+/* 🧭 Center Navigation */
 .nav {
-  display: flex;               
+  display: flex;
   align-items: center;
-  gap: 2rem;                   
+  gap: 2rem;
 }
 
 .nav-link {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 500;
-  color: #f9fafc;
+  color: #000;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #fc230b;
+  color: #e55545;
 }
-
 
 .nav-link.active {
-  color: #ed4040;
-  border-bottom: 2px solid #f33939;
-  padding-bottom: 2px;
+  color: #dd3e3e;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 3px;
 }
 
+/* 🔘 Right Side Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* 🛒 Cart Icon */
+.cart-btn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-btn svg {
+  width: 22px;
+  height: 22px;
+  stroke: #000;
+}
+.cart-btn:hover svg {
+  stroke: #e55545;
+}
+
+
+/* Login / Logout Button */
+.login-btn,
+.logout-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover,
+.logout-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* 🔲 Hamburger (Mobile) */
 .hamburger {
-  display: block;
+  display: none;
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  color: #4b5563;
+  color: #000;
 }
 
-@media (min-width: 768px) {
+/* 📱 Responsive */
+@media (max-width: 768px) {
   .nav {
-    display: flex;
-  }
-  .hamburger {
     display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .header-actions {
+    gap: 0.7rem;
+  }
+
+  .login-btn,
+  .logout-btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
   }
 }

@@ -9,7 +9,7 @@
 
 .slide-image {
   width: 100%;
-  height: 500px;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -41,8 +41,8 @@
   padding: 12px 24px;
   font-size: 23px;
   font-weight: 600;
-  background-color: #000;
-  color: #fff;
+  background-color: #f1ecec;
+  color: #1c1a1a;
   border: none;
   border-radius: 17px;
   cursor: pointer;

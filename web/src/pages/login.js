@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
-import "./signupPage.css"; 
+import "./login.css"; 
 
-function Signup() {
-  const [formData, setFormData] = useState({ name: "", email: "", password: "" });
+function Login() {
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -14,29 +14,28 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", formData);
-      alert("✅ Registered Successfully!");
-      navigate("/login");
+      const res = await axios.post("http://localhost:5000/api/auth/login", formData);
+      localStorage.setItem("token", res.data.token);
+      alert("✅ Login Successful!");
+      navigate("/dashboard");
     } catch (err) {
-      alert(err.response?.data?.message || "Error registering");
+      alert(err.response?.data?.message || "Error logging in");
     }
   };
 
   return (
-    <div className="signup-container">
-      <h2>Register</h2>
+    <div className="login-container">
+      <h2>Login</h2>
       <form onSubmit={handleSubmit}>
-   
-        <input name="name" placeholder="Full Name" onChange={handleChange} required />
-
+ 
         <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-
+    
         <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-        <button type="submit">Register</button>
+        <button type="submit"> <Link to="/shop">Login</Link></button>
       </form>
-      <p>Already have an account? <Link to="/login">Login</Link></p>
+      <p>Don’t have an account? <Link to="/signup">Sign Up</Link></p>
     </div>
   );
 }
 
-export default Signup;
+export default Login;
